@@ -39,15 +39,15 @@ app.layout = dbc.Container([
         dbc.Col([
             html.Span([
                     html.I(className='fa-solid fa-plane-departure'),
-                " Number of Passangers between European countries 2019-2021 ",
+                " Number of Passengers between European Countries 2019-2021 ",
                 html.I(className="fa-solid fa-plane-departure")], className='h2')
     ], width=10)
     ], justify='center', className='my-2'),
 
     dbc.Row([
         dbc.Col([html.Label('YEAR', className='bg-secondary')], width=2),
-        dbc.Col([html.Label('Number of passangers per Year', className='bg-secondary')], width={"size": 4, "offset": 1}),
-        dbc.Col([html.Label('Total passangers per Month', className='bg-secondary')], width={"size": 4, "offset": 1})
+        dbc.Col([html.Label('Number of passengers per Year', className='bg-secondary')], width={"size": 4, "offset": 1}),
+        dbc.Col([html.Label('Total passengers per Month', className='bg-secondary')], width={"size": 4, "offset": 1})
     ]),
 
     dbc.Row([
@@ -59,7 +59,7 @@ app.layout = dbc.Container([
             dcc.Dropdown([x for x in sorted(df['GEO'].unique())], multi=True, id='geo_dpdn'),
             html.Label('PARTNER', className='bg-secondary'),
             dcc.Dropdown([x for x in sorted(df['PARTNER'].unique())], multi=True, id='partner_dpdn'),
-            html.Label('Number of countries', className='bg-secondary'),
+            html.Label('Number of Countries', className='bg-secondary'),
             html.H1(id='num_country')
         ], width=2),
         dbc.Col([
@@ -71,7 +71,7 @@ app.layout = dbc.Container([
     ]),
 
     dbc.Row([
-        dbc.Col([html.Label("Number of Passengers Between Countries", className="align-middle")], width={"size": 6, "offset": 3})
+        dbc.Col([html.Label("Number of Passengers between Countries", className="align-middle")], width={"size": 6, "offset": 3})
     ], className='bg-secondary'),
 
     dbc.Row([
